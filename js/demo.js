@@ -62,9 +62,14 @@ $(function() {
 					},
 				},
 			},
-			dynamic: {
+			dynamicHeight: {
 				block: {
 					dynamicHeight: true,
+				},
+			},
+			barOverlay: {
+				block: {
+					barOverlay: true,
 				},
 			},
 			animation: {
