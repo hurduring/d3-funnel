@@ -22,6 +22,12 @@ $(function() {
 			chart: {
 				bottomWidth: 3 / 8,
 			},
+			block: {
+				minHeight: 25,
+			},
+			label: {
+				format: '{l}\n{f}',
+			},
 		};
 		var settings = {
 			curved: {
