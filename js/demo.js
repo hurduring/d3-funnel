@@ -85,8 +85,8 @@ $(function() {
 			},
 			label: {
 				label: {
-					fontSize: '15px',
-					fill: '#ffeb81',
+					fontFamily: '"Reem Kufi", sans-serif',
+					fontSize: '16px',
 				},
 			},
 		};
