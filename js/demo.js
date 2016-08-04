@@ -1,20 +1,20 @@
-$(function() {
-	$('input').change(function() {
+$(function () {
+	$('input').change(function () {
 		var data = [];
 
 		if ($('[value="color"]').is(':not(:checked)')) {
 			data = [
-				['Applicants',   12000],
+				['Applicants', 12000],
 				['Pre-screened', 4000],
-				['Interviewed',  2500],
-				['Hired',        1500],
+				['Interviewed', 2500],
+				['Hired', 1500],
 			];
 		} else {
 			data = [
-				['Teal',      12000, '#008080'],
-				['Byzantium', 4000,  '#702963'],
-				['Persimmon', 2500,  '#ff634d'],
-				['Azure',     1500,  '#007fff'],
+				['Teal', 12000, '#008080'],
+				['Byzantium', 4000, '#702963'],
+				['Persimmon', 2500, '#ff634d'],
+				['Azure', 1500, '#007fff'],
 			];
 		}
 
@@ -62,7 +62,7 @@ $(function() {
 			click: {
 				events: {
 					click: {
-						block: function(d) {
+						block: function (d) {
 							alert('<' + d.label.raw + '> selected.');
 						},
 					},
@@ -91,7 +91,7 @@ $(function() {
 			},
 		};
 
-		$('input[type="checkbox"]:checked').each(function() {
+		$('input[type="checkbox"]:checked').each(function () {
 			options = $.extend(true, options, settings[$(this).val()]);
 		});
 
