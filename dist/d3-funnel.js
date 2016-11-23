@@ -139,7 +139,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		_createClass(D3Funnel, [{
 			key: 'destroy',
 			value: function destroy() {
-				var container = (0, _d3Selection.select)(this.selector);
+				var container = (0, _d3Selection.select)(this.context.document).select(this.selector);
 
 				// D3's remove method appears to be sufficient for removing the events
 				container.selectAll('svg').remove();
@@ -318,8 +318,8 @@ return /******/ (function(modules) { // webpackBootstrap
 			key: 'getContainerDimensions',
 			value: function getContainerDimensions() {
 				return {
-					width: parseFloat((0, _d3Selection.select)(this.selector).style('width')),
-					height: parseFloat((0, _d3Selection.select)(this.selector).style('height'))
+					width: parseFloat((0, _d3Selection.select)(this.context.document).select(this.selector).style('width')),
+					height: parseFloat((0, _d3Selection.select)(this.context.document).select(this.selector).style('height'))
 				};
 			}
 
@@ -492,7 +492,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			key: 'drawOntoDom',
 			value: function drawOntoDom() {
 				// Add the SVG
-				this.svg = (0, _d3Selection.select)(this.selector).append('svg').attr('id', this.id).attr('width', this.width).attr('height', this.height);
+				this.svg = (0, _d3Selection.select)(this.context.document).select(this.selector).append('svg').attr('id', this.id).attr('width', this.width).attr('height', this.height);
 
 				var newPaths = this.makePaths();
 				this.blockPaths = newPaths[0];
