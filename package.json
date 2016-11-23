@@ -11,6 +11,9 @@
     "svg",
     "chart"
   ],
+  "scripts" : {
+    "build" : "gulp default"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jakezatecky/d3-funnel"

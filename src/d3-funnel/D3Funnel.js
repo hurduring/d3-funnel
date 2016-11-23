@@ -94,10 +94,13 @@ class D3Funnel {
 	 *                         and optionally a color (in hex).
 	 * @param {Object} options An optional configuration object to override
 	 *                         defaults. See the docs.
+	 * @param {Object} context Global object
 	 *
 	 * @return {void}
 	 */
-	draw(data, options = {}) {
+	draw(data, options = {}, context = window) {
+		this.context = context;
+
 		this.destroy();
 
 		this.initialize(data, options);
@@ -414,7 +417,7 @@ class D3Funnel {
 		while (findingId) {
 			id = `d3-funnel-chart-${this.autoId}`;
 
-			if (document.getElementById(id) === null) {
+			if (this.context.document.getElementById(id) === null) {
 				findingId = false;
 			}
 
